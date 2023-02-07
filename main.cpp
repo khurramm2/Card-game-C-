@@ -1,6 +1,16 @@
-// hello world
 #include <iostream>
+#include "turns.h"
 
 int main() {
-    std::cout << "hello";
+    turn_num = 1;
+
+    while (true){
+        cout << "it is your turn \n";
+        getch();
+        cout << turn_num << endl;
+
+    }
 }
+
+
+
