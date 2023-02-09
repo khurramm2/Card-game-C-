@@ -1,52 +1,45 @@
 #include <iostream>
-#include <string>
-#include <vector>
-#include <stdlib.h>
-
+#include <curses.h>
 using namespace std;
 
-int main()
-{
-    // variables
-    string shopName = "shop";
-    string currency = "gold";
-    vector<string> potions = {"potion1", "potion2", "card1", "card2"};
+int gold = 94;
 
-    // welcoming message
-    cout << "Welcome to " << shopName << "! Here, you can buy items " << currency << "." << endl;
+class Shop{ 
+public:
 
-    while (true)
-    {
-        // main menu
-        int option;
-        cout << "Select an option from the main menu:" << endl;
-        cout << "1. Buy an item" << endl;
-        cout << "2. Exit" << endl;
-        cin >> option;
+    int shop(){
+        string inventory[2] = {"potions", "cards"}; 
 
-        if (option == 1)
-        {
-            // pick an item
-            int index;
-            cout << "Which item would you like to purchase?" << endl;
-            for (int i = 0; i < items.size(); i++)
-            {
-                cout << (i + 1) << ". " << items[i] << endl;
+        int prices[2] = {10, 5}; 
+        
+
+        cout << "Welcome to the shop! Here you can buy potions and cards." << endl; 
+
+        cout << "Which item would you like to buy? (1 for potions, 2 for cards)" << endl; 
+        int item;
+        cin >> item; 
+
+        if (item == 1 || item == 2) { 
+
+            int cost = prices[item - 1]; 
+            cout << "The cost is " << cost << " coins. Would you like to proceed? (y/n)" << endl;
+            char proceed;
+            cin >> proceed; 
+
+            if (proceed == 'y') {
+                gold -= cost;
+                cout << "The item has been purchased. Your remaining balance is " << gold << " coins." << endl;
             }
-            cin >> index;
-            string item = items[index - 1];
+        } else {
+            cout << "Sorry, this item is not available in the shop." << endl;
+        }
 
-          
-            // exit
-            cout << "Thank you for visiting " << shopName << "!" << endl;
-            break;
-        }
-        else
-        {
-            // erorr
-            cout << "Invalid option. Please try again." << endl;
-        }
+        return 0;
     }
+};
 
-    return 0;
+int main(){
+    Shop s1;
+    s1.shop();
+
 }
