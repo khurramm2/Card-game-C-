@@ -1,4 +1,5 @@
 git add .
+git pull
 git commit no messages
 type in message -message
 ctrl x, click yes then crtl m 
