@@ -1,11 +1,12 @@
 #include <iostream>
-#include <unordered_map>
 #include <algorithm>
 #include <vector>
 #include <random>
 #include <ctime>
+#include "variables.h"
 using namespace std;
 
+variables var;
 
 //change this file to .h
 //edit the player_health variable
@@ -18,7 +19,8 @@ protected:
     vector<int> Attack, Block;
 
 public:
-    int player_health = 100; // change this to another class soon
+    int player_health = var.player_health;
+     // change this to another class soon
 
     void sethealth(int health){
         Health = health;
@@ -26,11 +28,8 @@ public:
     int gethealth(int health){
         return Health;
     }
-
     void setenemydead(bool enemydead){
-        if (Health <=0){
-            EnemyDead = true;
-        }
+        EnemyDead = enemydead;
     }
     bool getenemydead(bool enemydead){
         return EnemyDead;
@@ -40,7 +39,7 @@ public:
         //use this when it's the enemy turn
         srand(time(0));
         player_health -= Attack[rand() % Attack.size()];
-        return 0;
+        return player_health;
     }
 
     int enemy_block(){
@@ -58,5 +57,3 @@ public:
         Block = block;
     }
 };
-
-
