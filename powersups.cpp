@@ -15,8 +15,7 @@ public:
   int character_block(){
     //use this when it's the players turn
     srand(time(0));
-    int current_block = Block[rand() % Block.size()];
-    if relic1 in 
+    int current_block = Block[rand() % Block.size()]; 
     current_block = current_block + 6
     return current_block;
   }
