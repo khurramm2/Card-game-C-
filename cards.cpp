@@ -3,8 +3,10 @@
 #include <unordered_map>
 #include<unordered_set>
 #include <conio.h>
+#include "enemies.h"
 using namespace std;
 
+Enemy enemy;
 
 class Cards{
 public:
@@ -21,6 +23,9 @@ public:
         cout << Card_Name <<"  Block  " << Block;
     }
 
+    int player_attack(){
+        enemy.Health -= Damage;   
+        }
 
     Cards(string card_name,string card_summary, int damage, int block, int cost){
         Card_Name = card_name;
@@ -35,5 +40,5 @@ public:
 
 int main(){
     Cards card = {"Basic Attack |","this attacks", 10, 0, 4};
-    card.display_attack();
+    
 }
