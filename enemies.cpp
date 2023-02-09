@@ -2,16 +2,19 @@
 #include <unordered_map>
 #include <algorithm>
 #include <vector>
-#include "turns.h"
+//#include "main.cpp" //remove this when converting to .h
+#include <random>
+#include <ctime>
 using namespace std;
 
+//edit the player_health variable
 class Enemy{
 private:
-    int Health;
+    int Health;  //enemy health
     bool EnemyDead;
 protected:
     string Enemy_sum;
-    int Attack, Block;
+    vector<int> Attack, Block;
 
 public:
     int player_health = 100; // change this to another class soon
@@ -33,11 +36,21 @@ public:
     }
 
     int enemy_attack(){
-        if (game_turn % 2)
+        //use this when it's the enemy turn
+        srand(time(0));
+        player_health -= Attack[rand() % Attack.size()];
+        return 0;
+    }
+
+    int enemy_block(){
+        //use this when it's the enemy turn
+        srand(time(0));
+        int current_block = Block[rand() % Block.size()];
+        return current_block;
     }
 
 
-    Enemy(int health, int attack, int block){
+    Enemy(int health, vector<int> attack, vector<int> block){
         Health = health;
         Attack = attack;
         Block = block;
@@ -47,6 +60,7 @@ public:
 
 
 int main(){
-
-    return 2;
+    Enemy enemy = Enemy(100, {3,4,5}, {0,0,0,4,7,10});
+    cout << enemy.enemy_block();
+    
 }
