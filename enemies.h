@@ -2,11 +2,12 @@
 #include <unordered_map>
 #include <algorithm>
 #include <vector>
-//#include "main.cpp" //remove this when converting to .h
 #include <random>
 #include <ctime>
 using namespace std;
 
+
+//change this file to .h
 //edit the player_health variable
 class Enemy{
 private:
@@ -58,9 +59,3 @@ public:
 };
 
 
-
-int main(){
-    Enemy enemy = Enemy(100, {3,4,5}, {0,0,0,4,7,10});
-    cout << enemy.enemy_block();
-    
-}
