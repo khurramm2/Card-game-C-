@@ -12,7 +12,6 @@ variables var;
 //edit the player_health variable
 class Enemy{
 private:
-    int Health;  //enemy health
     bool EnemyDead;
 protected:
     string Enemy_sum;
@@ -20,14 +19,13 @@ protected:
 
 public:
     int player_health = var.player_health;
-     // change this to another class soon
-
-    void sethealth(int health){
-        Health = health;
-    }
-    int gethealth(int health){
-        return Health;
-    }
+    int Health;  //enemy health
+    // void sethealth(int health){
+    //     Health = health;
+    // }
+    // int gethealth(int health){
+    //     return Health;
+    // }
     void setenemydead(bool enemydead){
         EnemyDead = enemydead;
     }

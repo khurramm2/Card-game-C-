@@ -2,7 +2,7 @@
 #include <conio.h>
 #include <random>
 #include <ctime>
-//#include "enemies.h"
+#include "enemies.h"
 //#include "variables.h"
 using namespace std;
 
@@ -26,8 +26,9 @@ int main() {
     // cout << rand() % 5;
 
     //player_health = (75);
-    // Enemy enemy = {100,{10,12,14,19,18,7},{0,0,0,3,6,8,8}};
-
+    Enemy enemy = {100,{10,12,14,19,18,7},{0,0,0,3,6,8,8}};
+    //enemy.sethealth(health);
+    cout << enemy.gethealth(12);
     // cout << enemy.enemy_attack();
 
 
