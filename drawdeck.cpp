@@ -21,9 +21,13 @@ void deck(){
 
   }
 
-  for(int h,h<drawpile2.size(),h++){
-    cout <<drawpile2[h];
+  for(int h;h<drawpile2.size();h++){
+    cout <<drawpile2[h] << " ";
 
   }
 
+}
+
+int main(){
+  deck();
 }
