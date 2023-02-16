@@ -4,12 +4,13 @@
 #include <ctime>
 #include "enemies.h"
 #include "variables.h"
+#include "cards.h"
 using namespace std;
 
 //int player_health = 100;
-int turn_num = 0;
 
 int turns(){
+    
     while (true){
         cout << "type something in ";
         if (getch() == 13) {
@@ -19,15 +20,19 @@ int turns(){
     }
 }
 
-int main() {
-    //turns();
-    // vector<int> test = {1,2,3,4,5};
-    // srand(time(0));
-    // cout << rand() % 5;
+// int main() {
+//     turns();
+//     vector<int> test = {1,2,3,4,5};
+//     srand(time(0));
+//     cout << rand() % 5;
 
 
+// }
+
+int main(){
+    Cards card = {"Basic Attack |","this attacks", 10, 3, 4};
+    card.display_attack();
 }
-
 
 
 

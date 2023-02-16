@@ -4,6 +4,10 @@
 #include<unordered_set>
 #include <conio.h>
 
+
+#ifndef CARDS
+#define CARDS
+
 #include "enemies.h"
 #include "variables.h"
 
@@ -45,8 +49,4 @@ public:
 
 };
 
-
-int main(){
-    Cards card = {"Basic Attack |","this attacks", 10, 3, 4};
-    cout << card.player_block();
-}
+#endif

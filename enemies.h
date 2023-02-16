@@ -15,7 +15,6 @@ private:
 protected:
     string Enemy_sum;
     vector<int> Attack, Block;
-
 public:
     int Health; 
 
@@ -25,18 +24,21 @@ public:
     bool getenemydead(bool enemydead){
         return EnemyDead;
     }
+    
     int enemy_attack(){
         //use this when it's the enemy turn
         srand(time(0));
         player_health -= Attack[rand() % Attack.size()];
         return player_health;
     }
+
     int enemy_block(){
         //use this when it's the enemy turn
         srand(time(0));
         int current_block = Block[rand() % Block.size()];
         return current_block;
     }
+
     Enemy(int health, vector<int> attack, vector<int> block){
         Health = health;
         Attack = attack;
@@ -44,8 +46,60 @@ public:
     }
 };
 
+
+
+
+
+class Enemy_Special:Enemy{
+public:
+    int Poison;
+    int Strength_Scale;
+    int Minion;
+    int Freeze;
+
+    Enemy_Special(int health, vector<int> attack, vector<int> block, int poison, int strength_scale, int minion, int freeze)
+        :Enemy(health, attack, block)
+    {
+        Poison = poison;
+        Strength_Scale = strength_scale;
+        Minion = minion;
+        Freeze = freeze;
+    }
+
+    int enemy_poison(){
+        player_health - Poison;
+
+        while (Poison != 0){
+            Poison--;
+        }
+        return player_health;
+    }
+
+    // int scaling_strength(){
+    //     if turn_num++;{
+    //         Attack = Attack + Strength_Scale;
+    //     }
+    //     return 0;
+    // }
+
+    int freeze(){
+        if (player_health % 2 == 0){
+            player_health++;
+        }
+        return player_health;
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
 #endif
-
-
-
-//a
