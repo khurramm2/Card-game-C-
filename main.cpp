@@ -30,8 +30,9 @@ int turns(){
 // }
 
 int main(){
-    Cards card = {"Basic Attack |","this attacks", 10, 3, 4};
-    card.display_attack();
+    // Cards card = {"Basic Attack |","this attacks", 10, 3, 4};
+    // card.display
+    card1.display();
 }
 
 
