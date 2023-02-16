@@ -11,14 +11,15 @@ int player_health = 100;
 int currency = 0;
 int energy = 0;
 int turn_num = 1;
+<<<<<<< HEAD
 int block=0;
+=======
+int block = 0;
+>>>>>>> 991657c726a0a6f6db756796ca8cfe886e5f9dba
 
-vector<int> deck;
+vector<string> deck;
+vector<string> relics;
 
-// Cards Attack = {"Basic Attack |","this attacks", 5, 0, 4};
-// Cards Block = {"Basic Block |", 0, 5, 1}
-
-   
 #endif 
 
 
