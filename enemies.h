@@ -1,3 +1,6 @@
+#ifndef ENEMIES
+#define ENEMIES
+
 #include <iostream>
 #include <algorithm>
 #include <vector>
@@ -6,8 +9,6 @@
 #include "variables.h"
 using namespace std;
 
-#ifndef ENEMIES
-#define ENEMIES
 
 class Enemy{
 private:
@@ -54,15 +55,13 @@ class Enemy_Special:Enemy{
 public:
     int Poison;
     int Strength_Scale;
-    int Minion;
     int Freeze;
 
-    Enemy_Special(int health, vector<int> attack, vector<int> block, int poison, int strength_scale, int minion, int freeze)
+    Enemy_Special(int health, vector<int> attack, vector<int> block, int poison, int strength_scale, int freeze)
         :Enemy(health, attack, block)
     {
         Poison = poison;
         Strength_Scale = strength_scale;
-        Minion = minion;
         Freeze = freeze;
     }
 

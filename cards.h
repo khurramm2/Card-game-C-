@@ -22,12 +22,12 @@ public:
     int Cost;
 
 
-    void display_attack(){
-        cout << Card_Name << "  Damage: "<< Damage;
+    void display(){
+        cout << Card_Name << "  Damage: "<< Damage <<"  |  Block  " << Block;
     }
-    void display_defend(){
-        cout << Card_Name <<"  Block  " << Block;
-    }
+    // void display_defend(){
+    //     cout << Card_Name <<"  Block  " << Block;
+    // }
 
     int player_attack(){
         enemy.Health -= Damage;
