@@ -10,10 +10,12 @@ int health(){
 }
 
 void HUD(){
-  string name, healthbar = "|--------------|";
+  string name;
+  string healthbar = "|--------------|";
   cout <<"Enter your characters name:" ;
   cin >> name; 
-  cout << "Name: " << name << std::endl << "Health: " << health() << std::endl;
+  cout << "Name: " << name << std::endl << "Health: " << health()
+   ;
 }
 
 int main(){
