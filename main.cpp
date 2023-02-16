@@ -8,14 +8,17 @@
 using namespace std;
 
 //int player_health = 100;
-
+vector<int> test
 int turns(){
     cout << "type something in ";
     if (getch() == 13) {
         turn_num++;
         cout << turn_num << endl;
         return turn_num;
-        
+    
+    }
+    else if(getch()==99){
+        displayCards();
     }
     else{
         cout << "Please type enter to end your turn";
@@ -24,21 +27,21 @@ int turns(){
 }
 
 
-int main() {
-    while (true){
-        turns();
+// int main() {
+//     while (true){
+//         turns();
 
-        if (turn_num % 2 == 0){
-            cout << "hey" << endl;
-        }
+//         if (turn_num % 2 == 0){
+//             cout << "hey" << endl;
+//         }
 
-        else {
-            cout << "bye" << endl;
-        }
+//         else {
+//             cout << "bye" << endl;
+//         }
 
-    }
+//     }
 
-}
+// }
 
 
 
