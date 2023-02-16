@@ -1,19 +1,25 @@
-#include <iostream>
-
 #ifndef VARIABLES
 #define VARIABLES
 
+#include <iostream>
 #include <vector>
 #include "cards.h"
 #include "enemies.h"
+
 
 int player_health = 100;
 int currency = 0;
 int energy = 0;
 int turn_num = 1;
+int block;
+
 vector<int> deck;
 
-Cards card1 = {"Basic Attack |","this attacks", 10, 3, 4};
+// Cards Attack = {"Basic Attack |","this attacks", 5, 0, 4};
+// Cards Block = {"Basic Block |", 0, 5, 1}
+
+    Cards Attack = {"Basic Attack |","this attacks", 5, 0, 4};
+    Cards Block = {"Basic Block |","this blocks", 5, 0, 4};
 
 #endif 
 

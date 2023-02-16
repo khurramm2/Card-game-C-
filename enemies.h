@@ -1,14 +1,16 @@
+
+
+using namespace std;
+
 #ifndef ENEMIES
 #define ENEMIES
 
+#include "variables.h"
 #include <iostream>
 #include <algorithm>
 #include <vector>
 #include <random>
 #include <ctime>
-#include "variables.h"
-using namespace std;
-
 
 class Enemy{
 private:
