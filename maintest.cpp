@@ -6,9 +6,10 @@
 #include "variables.h"
 #include "cards.h"
 #include "Sprites.h"
+#include "drawdeck.h"
 using namespace std;
 
-//player_health = 100;
+//int player_health = 100;
 
 int turns(){
     //cout << "type something in ";
@@ -19,8 +20,10 @@ int turns(){
     
     }
     else if(getch()==99){
-        //displayCards();
-        cout<< "hey";
+        cout << "asdfyasfa";
+        // vector<int>currenthand;
+        // for(int a;a<current.size();a++){
+        //     cout <<currenthand[a] << " ";
     }
 
     else if(getch()==100){
@@ -33,11 +36,16 @@ int turns(){
     return turn_num;
 }
 
+//when it's your turn remove 5 cards from the drawpile and add it to your current hand
+//when it's enemy's turn remove 5 cards from your current hand and add it to your discardpile
+//When there are less than 5 cards in the dawpile shuffle the cards
+void draw cards(){
+    
+}
 
 
-//vector<string> hand = {Attack.Card_Name, Attack.Card_Name, Attack.Card_Name, Block.Card_Name, Block.Card_Name};
 int main() {
-    cout << "Welcome to dungeon fighter" << endl;
+    // cout << "Welcome to dungeon fighter" << endl;
     cout << "You have encountered an enemy \n";
 
     while (true){
@@ -45,7 +53,6 @@ int main() {
 
         if (turn_num % 2 == 0){
             slime.enemy_attack();
-            
             cout << "Your health is... " << player_health << endl;
         }
 
@@ -58,20 +65,25 @@ int main() {
     }
 
     
-    //cout << player_health;
-    
 
 }
 
 
 
 // int main(){
-//     Cards card = {"Basic Attack |","this attacks", 10, 3, 4};
-//     card.display();
+//     // Cards card = {"Basic Attack |","this attacks", 10, 3, 4};
+//     // card.display();
 
-//     vector<int> test = {1,2,3,4,5};
-//     srand(time(0));
-//     cout << rand() % 5;
 
-// }
+//     Block.display();
+//     }
+
+
+
+
+// vector<int> test = {1,2,3,4,5};
+// srand(time(0));
+// cout << rand() % 5;
+
+
 
