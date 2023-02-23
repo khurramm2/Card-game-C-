@@ -8,6 +8,7 @@
 #include <conio.h>
 #include "enemies.h"
 #include "variables.h"
+#include "Player.h"
 using namespace std;
 
 class Cards{
