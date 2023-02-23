@@ -13,9 +13,6 @@ int energy = 0;
 int turn_num = 1;
 int block = 0;
 
-vector<string> deck;
-vector<string> relics;
-
 
 #endif 
 

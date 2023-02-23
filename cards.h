@@ -25,15 +25,15 @@ public:
     //     cout << Card_Name <<"  Block  " << Block;
     // }
 
-    // int player_attack(){
-    //     enemy.Health -= Damage;
-    //     return enemy.Health;   
-    //     }
+    int player_attack(Enemy& enemy){
+        enemy.Health -= Damage;
+        return enemy.Health;   
+    }
 
-    // int player_block(){
-    //     player_health += Block;
-    //     return player_health;  
-    // }
+    int player_block(){
+        player_health += Block;
+        return player_health;  
+    }
 
     Cards(string card_name,string card_summary, int damage, int block, int cost){
         Card_Name = card_name;

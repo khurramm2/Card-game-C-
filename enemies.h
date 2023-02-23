@@ -52,42 +52,42 @@ public:
 
 
 
-// class Enemy_Special:Enemy{
-// public:
-//     int Poison;
-//     int Strength_Scale;
-//     int Freeze;
+class Enemy_Special:Enemy{
+public:
+    int Poison;
+    int Strength_Scale;
+    int Freeze;
 
-//     Enemy_Special(int health, vector<int> attack, vector<int> block, int poison, int strength_scale, int freeze)
-//         :Enemy(health, attack, block)
-//     {
-//         Poison = poison;
-//         Strength_Scale = strength_scale;
-//         Freeze = freeze;
-//     }
+    Enemy_Special(string name, int health, vector<int> attack, vector<int> block, int poison, int strength_scale)
+        :Enemy(name, health, attack, block)
+    {
+        Poison = poison;
+        Strength_Scale = strength_scale;
+        //Freeze = freeze;
+    }
 
-//     int enemy_poison(){
-//         player_health - Poison;
+    int enemy_poison(){
+        player_health - Poison;
 
-//         while (Poison != 0){
-//             Poison--;
-//         }
-//         return player_health;
-//     }
+        while (Poison != 0){
+            Poison--;
+        }
+        return player_health;
+    }
 
-//     // int scaling_strength(){
-//     //     if turn_num++;{
-//     //         Attack = Attack + Strength_Scale;
-//     //     }
-//     //     return 0;
-//     // }
+    // int scaling_strength(){
+    //     if turn_num++;{
+    //         Attack = Attack + Strength_Scale;
+    //     }
+    //     return 0;
+    // }
 
-//     int freeze(){
-//         if (player_health % 2 == 0){
-//             player_health++;
-//         }
-//         return player_health;
-//     }
-// };
+    int freeze(){
+        if (player_health % 2 == 0){
+            player_health++;
+        }
+        return player_health;
+    }
+};
 
 #endif
