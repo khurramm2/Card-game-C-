@@ -6,9 +6,10 @@
 #include "variables.h"
 #include "cards.h"
 #include "Sprites.h"
+#include <vector>
 using namespace std;
 
-int player_health = 100;
+//player_health = 100;
 
 int turns(){
     //cout << "type something in ";
@@ -19,7 +20,8 @@ int turns(){
     
     }
     else if(getch()==99){
-        displayCards();
+        //displayCards();
+        cout<< "hey";
     }
 
     else if(getch()==100){
@@ -30,11 +32,12 @@ int turns(){
         cout << "Please type enter to end your turn";
     }
     return turn_num;
+
 }
 
 
 
-vector<string> hand = {Attack.Card_Name, Attack.Card_Name, Attack.Card_Name, Block.Card_Name, Block.Card_Name};
+//vector<string> hand = {Attack.Card_Name, Attack.Card_Name, Attack.Card_Name, Block.Card_Name, Block.Card_Name};
 int main() {
     cout << "Welcome to dungeon fighter" << endl;
     cout << "You have encountered an enemy \n";
@@ -44,6 +47,7 @@ int main() {
 
         if (turn_num % 2 == 0){
             slime.enemy_attack();
+            
             cout << "Your health is... " << player_health << endl;
         }
 
@@ -56,15 +60,10 @@ int main() {
     }
 
     
-     for (string nums: hand){
-        cout << nums;
-     }
-
-    // vector<Cards> test = {Attack, Attack, Attack, Block, Block};
-    // cout << test[0];
+    //cout << player_health;
     
 
-// }
+}
 
 
 

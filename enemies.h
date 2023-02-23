@@ -1,7 +1,7 @@
 #ifndef ENEMIES
 #define ENEMIES
 #include "variables.h"
-
+#include "Player.h"
 #include <iostream>
 #include <algorithm>
 #include <vector>
@@ -63,7 +63,6 @@ public:
     {
         Poison = poison;
         Strength_Scale = strength_scale;
-        //Freeze = freeze;
     }
 
     int enemy_poison(){
@@ -82,12 +81,12 @@ public:
     //     return 0;
     // }
 
-    int freeze(){
-        if (player_health % 2 == 0){
-            player_health++;
-        }
-        return player_health;
-    }
+    // int freeze(){
+    //     if (player_health % 2 == 0){
+    //         player_health++;
+    //     }
+    //     return player_health;
+    // }
 };
 
 #endif
