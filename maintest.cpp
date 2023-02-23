@@ -40,7 +40,7 @@ int turns(){
 //when it's enemy's turn remove 5 cards from your current hand and add it to your discardpile
 //When there are less than 5 cards in the dawpile shuffle the cards
 void draw cards(){
-    
+
 }
 
 
