@@ -21,6 +21,11 @@ int turns(){
     else if(getch()==99){
         displayCards();
     }
+
+    else if(getch()==100){
+    //;
+    }
+
     else{
         cout << "Please type enter to end your turn";
     }

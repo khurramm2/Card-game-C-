@@ -11,15 +11,12 @@ int player_health = 100;
 int currency = 0;
 int energy = 0;
 int turn_num = 1;
-<<<<<<< HEAD
-int block=0;
-=======
 int block = 0;
->>>>>>> 991657c726a0a6f6db756796ca8cfe886e5f9dba
 
-vector<string> deck;
+vector<string> drawpile;
 vector<string> relics;
-
+vector<string> discardpile;
+vector<string> currenthand;
 #endif 
 
 
