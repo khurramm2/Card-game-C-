@@ -1,6 +1,6 @@
 #ifndef VARIABLES
 #define VARIABLES
-
+using namespace std;
 #include <iostream>
 #include <vector>
 
@@ -11,10 +11,11 @@ int turn_num = 1;
 int block = 0;
 
 //vectors give errors
-// vector<string> drawpile;
-// vector<string> relics;
-// vector<string> discardpile;
-// vector<string> currenthand;
+//vector<string> drawpile;
+vector<string> relics;
+vector<string> discard;
+vector<string> currenthand;
+
 
 
 
