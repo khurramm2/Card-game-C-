@@ -10,16 +10,14 @@ int energy = 0;
 int turn_num = 1;
 int block = 0;
 
+//vectors give errors
+// vector<string> drawpile;
+// vector<string> relics;
+// vector<string> discardpile;
+// vector<string> currenthand;
 
 
 
-
-
-
-vector<string> drawpile;
-vector<string> relics;
-vector<string> discardpile;
-vector<string> currenthand;
 #endif 
 
 

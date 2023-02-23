@@ -6,6 +6,7 @@
 #include "variables.h"
 #include "cards.h"
 #include "Sprites.h"
+#include <vector>
 using namespace std;
 
 //player_health = 100;
@@ -31,6 +32,7 @@ int turns(){
         cout << "Please type enter to end your turn";
     }
     return turn_num;
+
 }
 
 
