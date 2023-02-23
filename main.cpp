@@ -16,7 +16,10 @@ int turns(){
         turn_num++;
         //cout << turn_num << endl;
         return turn_num;
-        
+    
+    }
+    else if(getch()==99){
+        displayCards();
     }
     else{
         cout << "Please type enter to end your turn";
@@ -56,7 +59,7 @@ int main() {
     // cout << test[0];
     
 
-}
+// }
 
 
 

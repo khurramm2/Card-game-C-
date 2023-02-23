@@ -8,7 +8,7 @@ class Shop{
 public:
 
     int shop(){
-        string inventory[2] = {"potions", "cards"}; 
+        string inventory[2] = {"potions", "cards"}; //add relics to shop
 
         int prices[2] = {10, 5}; 
         
@@ -27,7 +27,7 @@ public:
             cin >> proceed; 
 
             if (proceed == 'y') {
-                gold -= cost;
+                gold -= cost; //check if player has enough money 
                 cout << "The item has been purchased. Your remaining balance is " << gold << " coins." << endl;
             }
         } else {
