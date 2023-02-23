@@ -58,8 +58,9 @@ int main() {
             //     discard.insert(currenthand.end());
             //     i++;
             // }
+
             
-            
+
         }
 
         else {
@@ -68,8 +69,8 @@ int main() {
             drawpile = draw1(drawpile);
             cout << 1 << endl;
             
-            if (drawpile.size()<=4){
-                shuffle(discard);
+            if (drawpile.size()<=5){
+                shuffle();
 
             }
             // "You did 5 damage";

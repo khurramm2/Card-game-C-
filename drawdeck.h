@@ -14,10 +14,7 @@ using namespace std;
 //vector<int> currenthand = {1,2,3,4,5,6,7,8,9,10};
 vector <string> drawpile = {Attack.Card_Name,Attack.Card_Name,Attack.Card_Name,Attack.Card_Name,Attack.Card_Name,Block.Card_Name,Block.Card_Name,Block.Card_Name,Block.Card_Name,Block.Card_Name};
 
-vector<string> shuffle(vector<string> discard){
-
-  drawpile={};
-
+vector<string> shuffle(){
   int i = 0, j=drawpile.size()-1;
 
   while(i<j){
