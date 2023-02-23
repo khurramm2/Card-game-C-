@@ -26,10 +26,10 @@ vector<string> shuffle(){
   }
 
 
-  for(int h;h<drawpile.size();h++){
-    cout <<drawpile[h] << " ";
+  // for(int h;h<drawpile.size();h++){
+  //   cout <<drawpile[h] << " ";
     
-  }
+  // }
   return drawpile;
 
 
@@ -73,7 +73,7 @@ vector<string> draw1(vector<string> drawpile){
 
 void emptycurrenthand(){
   while (!currenthand.empty()) {
-    for (int i = 0; i < currenthand.size();i++){
+    for (int i = 0; i < 5;i++){
       discard.push_back(currenthand[0]);
       currenthand.pop_back();
     }
