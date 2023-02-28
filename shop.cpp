@@ -30,7 +30,12 @@ public:
                 gold -= cost; //check if player has enough money 
                 cout << "The item has been purchased. Your remaining balance is " << gold << " coins." << endl;
             }
-        } else {
+        }if (gold<cost){
+            cout<<"You cant buy the item."<< endl;
+            continue
+
+        }
+        else {
             cout << "Sorry, this item is not available in the shop." << endl;
         }
 
