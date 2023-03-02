@@ -35,45 +35,37 @@ int turns(){
 
 }
 
+//note in the child classes I cannot access the constructor variables.
 
-
-//vector<string> hand = {Attack.Card_Name, Attack.Card_Name, Attack.Card_Name, Block.Card_Name, Block.Card_Name};
+vector<string> hand = {Attack.Card_Name, Attack.Card_Name, Attack.Card_Name, Block.Card_Name, Block.Card_Name};
 int main() {
-    cout << "Welcome to dungeon fighter" << endl;
-    cout << "You have encountered an enemy \n";
+    // cout << "Welcome to dungeon fighter" << endl;
+    // cout << "You have encountered an enemy \n";
 
-    while (true){
-        turns();
+    // while (true){
+    //     turns();
 
-        if (turn_num % 2 == 0){
-            slime.enemy_attack();
+    //     if (turn_num % 2 == 0){
+    //         slime.enemy_attack();
             
-            cout << "Your health is... " << player_health << endl;
-        }
+    //         cout << "Your health is... " << player_health << endl;
+    //     }
 
-        else {
-            "You did 5 damage";
-            slime.Health -= 5;
-            cout << slime.Health << endl;
-        }
+    //     else {
+    //         "You did 5 damage";
+    //         slime.Health -= 5;
+    //         cout << slime.Health << endl;
+    //     }
         
-    }
-
+    // }
+    
     
     //cout << player_health;
-    
+    Cards_Curse nullcurse = {"curse", "does nothing", 0, 0};
+    cout << nullcurse.Card_Name;
 
 }
 
 
 
-// int main(){
-//     Cards card = {"Basic Attack |","this attacks", 10, 3, 4};
-//     card.display();
-
-//     vector<int> test = {1,2,3,4,5};
-//     srand(time(0));
-//     cout << rand() % 5;
-
-// }
 

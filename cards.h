@@ -46,4 +46,46 @@ public:
 
 };
 
+
+class Cards_Special : Cards{
+public:
+    int Poison;
+    int Metallic;
+    int Energy;
+    Cards_Special(string card_name,string card_summary, int damage, int block, int cost, int poison, int metallic, int energy)
+        :Cards(card_name, card_summary, damage, block, cost)
+    {
+        Poison = poison;
+        Metallic = metallic;
+        Energy = energy;
+    }
+    
+};
+
+
+class Cards_Curse : Cards{
+public:
+    int Weak, Damage, Energy_Loss;
+    Cards_Curse(string card_name,string card_summary, int weak, int energy_loss)
+        :Cards(card_name, card_summary, 0, 0, 0)
+    {
+        Weak = weak;
+        Energy_Loss = energy_loss;
+    }
+    
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
 #endif
