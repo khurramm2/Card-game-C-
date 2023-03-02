@@ -1,5 +1,6 @@
 #include<iostream>
 #include <vector>
+
 class HealthPotion {
 private:
     vector < int > randHealth = {5, 10, 15, 20};
@@ -12,8 +13,8 @@ public:
         }
     }
 
-    int getHealthBoost() {
+    int getHealthBoost() {1
         int randomNum = (rand() % randHealth.size());
         return randHealth[randomNum];
-    }
+    } 
 };

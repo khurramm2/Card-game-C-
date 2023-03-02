@@ -39,31 +39,47 @@ int turns(){
 //when it's your turn remove 5 cards from the drawpile and add it to your current hand
 //when it's enemy's turn remove 5 cards from your current hand and add it to your discardpile
 //When there are less than 5 cards in the dawpile shuffle the cards
-void draw cards(){
-    
-}
+
 
 
 int main() {
     // cout << "Welcome to dungeon fighter" << endl;
     cout << "You have encountered an enemy \n";
-
+    int i = 0;
     while (true){
         turns();
+        
 
         if (turn_num % 2 == 0){
             slime.enemy_attack();
             cout << "Your health is... " << player_health << endl;
+            // while (i < currenthand.size()){
+            //     currenthand.pop_back();
+            //     discard.insert(currenthand.end());
+            //     i++;
+            // }
+
+            
+
         }
 
         else {
-            "You did 5 damage";
-            slime.Health -= 5;
-            cout << slime.Health << endl;
+            
+            //draw1(drawpile);
+            drawpile = draw1(drawpile);
+            cout << 1 << endl;
+            
+            if (drawpile.size()<=5){
+                shuffle();
+
+            }
+            // "You did 5 damage";
+            // slime.Health -= 5;
+            // cout << slime.Health << endl;
         }
         
     }
-
+    
     
 
 }
