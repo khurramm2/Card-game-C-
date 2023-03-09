@@ -11,7 +11,7 @@ int energy = 0;
 int turn_num = 1;
 int block = 0;
 int gold;
-
+vector<string> options;
 
 
 #endif 

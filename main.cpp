@@ -13,9 +13,8 @@ using namespace std;
 
 vector<Cards> hand = {Attack, Attack, Attack, Block, Block};
 vector<Cards> discard = {Attack, Attack, Attack, Block, Block};
-vector<Cards> dp = {Attack, Attack, Attack, Block, Block};
-int rand_options =  3;//outside for now, so select_random works
-Map mp;
+vector<Cards> drawpile = {Attack, Attack, Attack, Block, Block};
+
 
 int turns(){
     if (getch() == 13) {
@@ -47,67 +46,77 @@ void display_deck(){
     }
 }
 
-void select_random(){
-    srand(time(NULL));
-    int rand_chance = (rand() % 99) + 1;
-    vector<Map> options = {};
-
-    for (int i = 0; i <= rand_options; i++){
+vector<string> select_random(int rnd){
+    vector<string> options = {};
+    for (int i = 0; i <= rnd; i++){
+        //srand(time(NULL));
+        int rand_chance = (rand() % 99) + 1;
         if (rand_chance <= 15){
-            options.push_back(mp.Campfire);
+            options.push_back("Campfire");
             
         }    
-
-        // else if( rand_chance > 15 && rand_chance <= 30){
-        //     options.push_back(mp.campfire);
-        // }
-
-        // else if( rand_chance > 30 && rand_chance <= 40){
-        //     options.push_back(mp.campfire);
-        // }
-
-        // else if( rand_chance > 40 && rand_chance <= 100){
-        //     options.push_back(mp.campfire);
-        // }
-
+        else if( rand_chance > 15 && rand_chance <= 30){
+            options.push_back("Shop");
+        }
+        else if( rand_chance > 30 && rand_chance <= 40){
+            options.push_back("Mystery choice");
+        }
+        else if( rand_chance > 40 && rand_chance <= 100){
+            options.push_back("Enemy");
+        }
     }
+
+    return options;
 }
 
-// int main() {
-//     cout << "Welcome to dungeon fighter" << endl;
-
-//     int total_travel = 1;
-//     srand(time(NULL));
-//     int rand_options = rand() % 4;
-//     cout << "You have " << rand_options + 1 << " paths to choose from \n";
+int main() {
+    cout << "Welcome to dungeon fighter" << endl;
     
+    int total_travel = 1;
+    srand(time(NULL));
+    int rand_options = rand() % 4;
 
 
-//     while (player_health > 0){
-//         turns();
+    if (rand_options == 0){
+    cout << "You have " << rand_options + 1 << " path to choose from: \n";
+    }
+    else{
+        cout << "You have " << rand_options + 1 << " paths to choose from, type in the number corresponding to the path you choose: \n" << endl;
+    }
 
-//         if (turn_num % 2 == 0){
-//             Slime.enemy_attack();
+    vector<string> options = select_random(rand_options);
+
+    for (int i = 0; i < options.size(); i++) {
+        cout << options[i] << ": " << i << endl;
+    }
+
+
+    cout <<  "type in enter";
+    
+    while (player_health > 0){
+        turns();
+        if (turn_num % 2 == 0){
+            Slime.enemy_attack();
             
-//             cout << "Your health is... " << player_health << endl;
-//         }
+            cout << "Your health is... " << player_health << endl;
+        }
 
-//         else {
-//             "You did 5 damage";
-//             Slime.Health -= 5;
-//             cout << Slime.Health << endl;
-//         }
+        else {
+            "You did 5 damage";
+            Slime.Health -= 5;
+            cout << Slime.Health << endl;
+        }
         
-//     }
+    }
 
-//     if (player_health <= 0){
-//         cout << "GAME OVER!";
-//     }
-
-
+    if (player_health <= 0){
+        cout << "GAME OVER!";
+    }
 
 
-// }
+
+
+}
 
 
 
