@@ -20,21 +20,24 @@ public:
 
 
     void display(){
-        cout << Card_Name << "  Damage: "<< Damage <<"  |  Block  " << Block;
+        cout << endl << Card_Name << "  Damage: "<< Damage <<"  Block: " << Block << endl;
     }
+
+    
+
     // void display_defend(){
     //     cout << Card_Name <<"  Block  " << Block;
     // }
 
-    int player_attack(Enemy& enemy){
-        enemy.Health -= Damage;
-        return enemy.Health;   
-    }
+    // int player_attack(Enemy& enemy){
+    //     enemy.Health -= Damage;
+    //     return enemy.Health;   
+    // }
 
-    int player_block(){
-        player_health += Block;
-        return player_health;  
-    }
+    // int player_block(){
+    //     player_health += Block;
+    //     return player_health;  
+    // }
 
     Cards(string card_name,string card_summary, int damage, int block, int cost){
         Card_Name = card_name;
@@ -47,34 +50,41 @@ public:
 };
 
 
-class Cards_Special : Cards{
-public:
-    int Poison;
-    int Metallic;
-    int Energy;
-    Cards_Special(string card_name,string card_summary, int damage, int block, int cost, int poison, int metallic, int energy)
-        :Cards(card_name, card_summary, damage, block, cost)
-    {
-        Poison = poison;
-        Metallic = metallic;
-        Energy = energy;
-    }
+// class Cards_Special : Cards{
+// public:
+//     int Poison;
+//     int Metallic;
+//     int Energy;
+//     Cards_Special(string card_name,string card_summary, int damage, int block, int cost, int poison, int metallic, int energy)
+//         :Cards(card_name, card_summary, damage, block, cost)
+//     {
+//         Poison = poison;
+//         Metallic = metallic;
+//         Energy = energy;
+//     }
     
-};
+// };
 
 
-class Cards_Curse : Cards{
-public:
-    int Weak, Damage, Energy_Loss;
-    Cards_Curse(string card_name,string card_summary, int weak, int energy_loss)
-        :Cards(card_name, card_summary, 0, 0, 0)
-    {
-        Weak = weak;
-        Energy_Loss = energy_loss;
-    }
+// class Cards_Curse : Cards{
+// public:
+//     int Weak, Damage, Energy_Loss;
+//     Cards_Curse(string card_name,string card_summary, int weak, int energy_loss)
+//         :Cards(card_name, card_summary, 0, 0, 0)
+//     {
+//         Weak = weak;
+//         Energy_Loss = energy_loss;
+//     }
     
 
-};
+// };
+
+
+// Cards Attack = {"Basic Attack |","this attacks", 5, 0, 1};
+
+// int main(){
+//     Attack.display();
+// }
 
 
 

@@ -11,13 +11,7 @@ int energy = 0;
 int turn_num = 1;
 int block = 0;
 int gold;
-
-//vectors give errors
-// vector<string> drawpile;
-// vector<string> relics;
-// vector<string> discardpile;
-// vector<string> currenthand;
-
+vector<string> options;
 
 
 #endif 
