@@ -74,12 +74,12 @@ public:
         return player_health;
     }
 
-    // int scaling_strength(){
-    //     if turn_num++;{
-    //         Attack = Attack + Strength_Scale;
-    //     }
-    //     return 0;
-    // }
+    int scaling_strength(){
+        for (int nums: Attack){
+            Attack[nums] +=Strength_Scale;
+        }
+        return 0;
+    }
 
     // int freeze(){
     //     if (player_health % 2 == 0){
