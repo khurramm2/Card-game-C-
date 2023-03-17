@@ -1,6 +1,6 @@
 
 #include <iostream>
-//#include <curses.h>
+//#include <curses.h> commented as it stopped minigame1 from working
 
 using namespace std;
 
