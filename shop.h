@@ -1,6 +1,6 @@
 
 #include <iostream>
-#include <curses.h>
+//#include <curses.h>
 
 using namespace std;
 
@@ -44,8 +44,8 @@ public:
     }
 };
 
-int main(){
-    Shop s1;
-    s1.shop();
+// int main(){
+//     Shop s1;
+//     s1.shop();
 
-}
+// }
