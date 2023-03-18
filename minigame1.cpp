@@ -88,3 +88,92 @@ int main(){
     play_again();
 }
 
+
+
+
+
+
+
+
+
+// #include <iostream>
+// #include <cstdlib>
+// #include <ctime>
+// #include  "shop.h"
+// using namespace std;
+
+// class Game {
+// private:
+//     int gold;
+//     int wins;
+//     int losses;
+//     int consecutiveWins;
+//     int randomNumber;
+//     int random_check;
+// public:
+//     Game() {
+//         gold;
+//         wins = 0;
+//         losses = 0;
+//         consecutiveWins = 0;
+//         random_check = 5;
+//         randomNumber =  rand() % 20 + 1;;
+//     }
+//     void play() {
+//         cout << "You have summoned genie of luck. We shall play a game now. I will think of a number between 1-20. If you guess the right number you will receive 5 gold. If you can guess the right number twice in a row you will also receive a hint." << endl;
+//         srand(time(0));
+//         clue();
+//         int userGuess;
+//         cout << "I have chosen my number and now it's time to make your choice" << endl;
+//         cout << "Enter a number between 1 and 20" << endl;
+//         cin >> userGuess;
+//         if (userGuess == random_check) {
+//             cout << "You have guessed the correct number. You win 5 gold." << endl;
+//             consecutiveWins++;
+//             cout << "Consecutive wins " << consecutiveWins << endl;
+//             gold += 5;
+//             wins++;
+//             playAgain();
+//         } else {
+//             cout << "Wrong answer" << endl;
+//             consecutiveWins = 0;
+//             cout << "Consecutive wins " << consecutiveWins << endl;
+//             losses++;
+//             playAgain();
+//         }
+//     }
+//     void playAgain() {
+//         int again;
+//         cout << "Would you like test your luck? Enter 1 for yes and 2 for no " << endl;
+//         cin >> again;
+//         if (again == 1) {
+//             cout << "ok" << endl;
+//             play();
+//         } else if (again == 2) {
+//             cout << "Ok" << endl;
+//             cout << "You leave the game with " << gold << " gold" << " and you have won the game " << wins << " times and have lost " << losses << " times" << endl;
+//         } else {
+//             cout << "You must enter 1 or 2." << endl;
+//             playAgain();
+//         }
+//     }
+//     void clue() {
+//         if (consecutiveWins >= 2) {
+//             randomNumber = rand() % 20 + 1;
+//             if (randomNumber < 10) {
+//                 cout << "You have won a hint. The number has one digit." << endl;
+//             } else {
+//                 cout << "You have won a hint. The number has two digits." << endl;
+//             }
+//         } else {
+//             cout << "You need at least 2 wins in a row to get a clue." << endl;
+//         }
+//     }
+// };
+
+// int main() {
+//     Game game;
+//     game.play();
+//     return 0;
+// }
+
