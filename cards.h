@@ -20,24 +20,20 @@ public:
 
 
     void display(){
-        cout << endl << Card_Name << "  Damage: "<< Damage <<"  Block: " << Block << endl;
+        cout << Card_Name << "  Damage: "<< Damage <<"  Block: " << Block << endl;
     }
 
-    
-
-    // void display_defend(){
-    //     cout << Card_Name <<"  Block  " << Block;
-    // }
-
-    // int player_attack(Enemy& enemy){
-    //     enemy.Health -= Damage;
-    //     return enemy.Health;   
-    // }
+    int player_attack(int health){
+        health -= Damage;
+        return health;
+    }
 
     // int player_block(){
     //     player_health += Block;
     //     return player_health;  
     // }
+
+    //void remove_block(){}
 
     Cards(string card_name,string card_summary, int damage, int block, int cost){
         Card_Name = card_name;

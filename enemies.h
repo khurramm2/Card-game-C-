@@ -15,15 +15,20 @@ private:
 protected:
     string Enemy_sum;
     vector<int> Attack, Block;
+    int Health; 
 public:
     string Name;
-    int Health; 
+    
 
     void setenemydead(bool enemydead){
         EnemyDead = enemydead;
     }
     bool getenemydead(bool enemydead){
         return EnemyDead;
+    }
+
+    int getHealth(){
+        return Health;
     }
     
     int enemy_attack(){

@@ -19,5 +19,5 @@ Enemy Slime = {"Slime", 20, {1,3,3,0,0,0,5}, {0,0,0,3,3,3}};
 Enemy Wolf = {"Wolf", 25, {3,3,4,7,0,0,4},{0,0,5,6}};
 
 std::vector<Enemy> Enemy_list = {Slime, Wolf};
-//unordered_map<Enemy, int> = {{Slime, 12}, {Wolf,15}}
+
 #endif
