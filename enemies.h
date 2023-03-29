@@ -18,6 +18,7 @@ protected:
     int Health; 
 public:
     string Name;
+    int Been_Poisoned;
     
 
     void setenemydead(bool enemydead){
@@ -31,11 +32,14 @@ public:
         return Health;
     }
     
-    int enemy_attack(){
+    int enemy_attack(int health){
         //use this when it's the enemy turn
         srand(time(0));
-        player_health -= Attack[rand() % Attack.size()];
-        return player_health;
+        int rand_attack = Attack[rand() % Attack.size()];
+        health -= rand_attack;
+
+        cout << endl << "The enemy attacked for " << rand_attack << " damage \n";
+        return health;
     }
 
     int enemy_block(){
@@ -45,7 +49,21 @@ public:
         return current_block;
     }
 
-    Enemy(string name, int health, vector<int> attack, vector<int> block){
+    
+
+    int has_been_poisoned(int hp){
+        hp -= Been_Poisoned;
+        
+        if (Been_Poisoned > 0 ){
+            Been_Poisoned -= 1;
+        }
+
+        cout << endl << "Enemy took: " << Been_Poisoned << " Poison Damage \n"; 
+        
+        return hp;
+    }
+
+    Enemy(string name, int health, vector<int> attack, vector<int> block) : Been_Poisoned(0){
         Name = name;
         Health = health;
         Attack = attack;

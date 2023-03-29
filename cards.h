@@ -20,20 +20,15 @@ public:
 
 
     void display(){
-        cout << Card_Name << "  Damage: "<< Damage <<"  Block: " << Block << endl;
+        cout << Card_Name << "  Damage: "<< Damage <<"  Block: " << Block << "  Cost: " << Cost;
     }
+
 
     int player_attack(int health){
         health -= Damage;
         return health;
     }
 
-    // int player_block(){
-    //     player_health += Block;
-    //     return player_health;  
-    // }
-
-    //void remove_block(){}
 
     Cards(string card_name,string card_summary, int damage, int block, int cost){
         Card_Name = card_name;
@@ -46,20 +41,23 @@ public:
 };
 
 
-// class Cards_Special : Cards{
-// public:
-//     int Poison;
-//     int Metallic;
-//     int Energy;
-//     Cards_Special(string card_name,string card_summary, int damage, int block, int cost, int poison, int metallic, int energy)
-//         :Cards(card_name, card_summary, damage, block, cost)
-//     {
-//         Poison = poison;
-//         Metallic = metallic;
-//         Energy = energy;
-//     }
+class Cards_Special : public Cards{
+public:
+    int Poison;
+    int Metallic;
+    int Energy;
+    Cards_Special(string card_name,string card_summary, int damage, int block, int cost, int poison, int metallic)
+        :Cards(card_name, card_summary, damage, block, cost)
+    {
+        Poison = poison;
+        Metallic = metallic;
+    }
+
+    void poison_attack(Enemy enemy){        
+        enemy.Been_Poisoned = Poison;
+    }
     
-// };
+};
 
 
 // class Cards_Curse : Cards{
@@ -74,21 +72,6 @@ public:
     
 
 // };
-
-
-// Cards Attack = {"Basic Attack |","this attacks", 5, 0, 1};
-
-// int main(){
-//     Attack.display();
-// }
-
-
-
-
-
-
-
-
 
 
 
