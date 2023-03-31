@@ -111,7 +111,8 @@ private:
     int randomNumber;
     int random_check;
 public:
-    Game() {
+    Game() 
+    {
         gold = 50;
         wins = 0;
         losses = 0;
@@ -119,7 +120,8 @@ public:
         random_check = 5;
         randomNumber =  rand() % 20 + 1;;
     }
-    void play() {
+    void play()
+    {
         cout << "You have summoned genie of luck. We shall play a game now. I will think of a number between 1-20. If you guess the right number you will receive 5 gold. If you can guess the right number twice in a row you will also receive a hint." << endl;
         srand(time(0));
         clue();
