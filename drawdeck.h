@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <random>
 #include <unordered_set>
 #include <conio.h>
 #include "variables.h"
@@ -16,33 +17,35 @@ using namespace std;
 
 
 
-void shuffle(vector<Cards> drawpile, vector<Cards> discard){
+void shuffle(vector<Cards>& drawpile, vector<Cards>& discard){
   int i = 0, j=drawpile.size()-1;
 
-  while(i<j){
+  for (int i = 0; i < discard.size();i++){
     drawpile.push_back(discard[i]);
-    drawpile.push_back(discard[j]);
-    i++;
-    j--;
-    
   }
+
+  auto rng = std::default_random_engine {};
+  std::shuffle(std::begin(drawpile), std::end(drawpile), rng);
+  discard = {};
 }
 
-void draw_function(vector<Cards> currenthand, vector<Cards> drawpile){
+
+
+void draw_function(vector<Cards>& currenthand, vector<Cards>& drawpile){
   for (int i = 0; i < 5; i++){
     currenthand.push_back(drawpile[i]);
-    drawpile.pop_back();
   }
+
+  drawpile.erase(drawpile.begin(), drawpile.begin() + 5);
 
 }
 
-void emptycurrenthand(vector<Cards> currenthand, vector<Cards> discard){
-  while (!currenthand.empty()) {
-    for (int i = 0; i < 5;i++){
-      discard.push_back(currenthand[i]);
-      currenthand.erase(currenthand.begin());
-    }
+void emptycurrenthand(vector<Cards>& currenthand, vector<Cards>& discard){
+  for (int i = 0; i < currenthand.size();i++){
+    discard.push_back(currenthand[i]);
   }
+  currenthand = {};
+  
 }
 
 
