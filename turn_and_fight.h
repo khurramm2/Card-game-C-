@@ -128,7 +128,7 @@ int Enemyfight(){
             }
             cout << endl << "Your health is... " << player_health << endl;
             draw_function(hand, drawpile);
-            this_thread::sleep_for(chrono::milliseconds(700));
+            this_thread::sleep_for(chrono::milliseconds(800));
             fixed_block = 0;
             turn_num++;
         }
@@ -154,7 +154,7 @@ int Enemyfight(){
 
             cout << endl << "enemy health is "<< enemy_health << endl;
             emptycurrenthand(hand, discard);
-            this_thread::sleep_for(chrono::milliseconds(700));
+            this_thread::sleep_for(chrono::milliseconds(800));
             turn_num++;
             
             

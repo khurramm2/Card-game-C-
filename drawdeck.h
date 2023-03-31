@@ -29,8 +29,6 @@ void shuffle(vector<Cards>& drawpile, vector<Cards>& discard){
   discard = {};
 }
 
-
-
 void draw_function(vector<Cards>& currenthand, vector<Cards>& drawpile){
   for (int i = 0; i < 5; i++){
     currenthand.push_back(drawpile[i]);

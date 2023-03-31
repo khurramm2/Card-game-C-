@@ -24,11 +24,9 @@ Cards_Special Poison_Attack = {"Poison Attack", "Basic attack with poison damage
 Enemy Slime = {"Slime", 20, {1,3,3,0,0,0,5}, {0,0,0,3,3,3}};
 Enemy Wolf = {"Wolf", 25, {3,3,4,7,0,0,4},{0,0,5,6}};
 
-std::vector<Enemy> Enemy_list = {Slime, Wolf};
-
+vector<Enemy> Enemy_list = {Slime, Wolf};
 
 vector<Cards> hand = {Attack, Poison_Attack, Poison_Attack, Block, Block};
-//vector<Cards> hand = {Attack, Attack, Attack, Block, Block};
 vector<Cards> discard = {};
 vector<Cards> drawpile = {Heavy_Attack, Attack, Dash_Strike, Block, Block};
 
